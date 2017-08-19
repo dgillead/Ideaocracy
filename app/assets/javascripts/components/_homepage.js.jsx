@@ -1,4 +1,4 @@
-let Main = React.createClass({
+let HomePage = React.createClass({
   render() {
     return (
       <div className="jumbotron">
