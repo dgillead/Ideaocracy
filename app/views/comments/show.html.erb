@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+ <h1><%= @idea.name.capitalize %> is:</h1>
+ <div><%= @comments.body %>!</div>
+ <%= link_to 'Edit', edit_idea_comment_path(@idea_id = params[:idea_id], @comments) %> |
+ <%= link_to 'Back', idea_comment_path %>

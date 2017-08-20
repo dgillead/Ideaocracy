@@ -22,7 +22,7 @@
   margin: 5px;
 }
 
-.jumbotron {
+#intro-container {
    background: rgb(200, 54, 54);
    background: rgba(192, 192, 192, 0.8);
 }

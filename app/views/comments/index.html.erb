@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+ 
+ <h1>Comment for <%= @idea.name %> </h1>
+ 
+ <table>
+   <thead>
+     <tr>
+       <th>Body</th>
+       <th colspan="3"></th>
+     </tr>
+   </thead>
+ 
+   <tbody>
+     <% comments.each do |Comment| %>
+       <tr>
+         <td><%= comment.body %></td>
+ 
+         <td><%= link_to 'Show', comment.idea %></td>
+         <td><%= link_to 'Edit', edit_idea_comment_path(@idea_id = params[:idea_id], Comment) %></td>
+         <td><%= link_to 'Destroy', idea_comment_path(@comment_id = params[:comment_id], product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       </tr>
+     <% end %>
+   </tbody>
+ </table>
+ 
+ <br>
+ 
+ <%= link_to 'New Comment', new_idea_comment_path %>
