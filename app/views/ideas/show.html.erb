@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1><%= idea.title %></h1>
-<div><%= idea.summary %></div>
+<div><%= idea.summary %></div><br>
 <%= link_to 'Edit', edit_idea_path(idea) %> |
-<%= link_to 'Back', ideas_path %>
+<td><%= link_to 'Delete', idea_path(idea), method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
+<%= link_to 'Back', ideas_path, class: 'btn btn-info' %>

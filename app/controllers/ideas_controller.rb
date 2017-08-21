@@ -1,5 +1,4 @@
 
-require 'pry'
 class IdeasController < HomeController
   before_action :find_idea, only: [:show, :edit, :update, :destroy]
 
@@ -16,7 +15,6 @@ class IdeasController < HomeController
   end
 
   def create
-# binding.pry
     @idea = current_user.ideas.new(idea_params)
     if @idea.save
       redirect_to idea_path(@idea), notice: 'idea was successfully created.'
@@ -45,7 +43,6 @@ class IdeasController < HomeController
 private
 
   def find_idea
-    # binding.pry
     @idea = Idea.find(params[:id])
   end
 

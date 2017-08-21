@@ -1,16 +1,12 @@
-<h1 class="text-center">Ideas</h1>
-<% if @ideas.any? %>
-  <% @ideas.each do |idea| %>
-    <p><%= link_to idea.title, idea_path(idea.id) %> <%= idea.created_at.strftime('%y-%m-%d %H:%m') %></p>
-    <p><%= idea.summary %></p> 
-    <td><%= link_to 'Show', idea_path(idea) %></td>
-    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-    <td><%= link_to 'Destroy', idea_path(idea), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <!-- <td><%#= link_to 'Write a comment', new_idea_comment_path(idea) %></td> -->
-    
+  <h1 class="text-center">Ideas</h1>
+  <% if @ideas.any? %>
+    <% @ideas.each do |idea| %>
+      <p><%= link_to idea.title, idea_path(idea.id) %> <%= idea.created_at.strftime('%y-%m-%d %H:%m') %></p>
+      <p><%= idea.summary %></p> 
+      <td><%= link_to 'Details', idea_path(idea) %></td><br><br>
+      <!-- <td><%#= link_to 'Write a comment', new_idea_comment_path(idea) %></td> -->   
+    <% end %>
+  <% else %>
+    Nothing yet
   <% end %>
-<% else %>
-  Nothing yet
-<% end %>
-
-<%= link_to 'New Idea', new_idea_path %>
+  <%= link_to 'Create New Idea', new_idea_path, class: 'btn btn-info' %>
