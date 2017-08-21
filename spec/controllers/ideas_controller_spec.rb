@@ -27,5 +27,20 @@ RSpec.describe IdeasController, type: :controller do
     end
   end
 
+  describe "GET #show" do
+    # it 'shows me a list of ideas' do
+    #   idea = idea.create(title: 'This is the greatest idea ever.', summary: 'You will really like it!')
+      
+    #   get "/ideas/#{idea.id}"
+
+    #   expect(last_response.title).to include('greatest idea')
+    #   expect(last_response.summary).to include('really like')
+    #   expect(last_response.body).to include("/ideas/#{idea.id}/edit")
+    # end
+  end
+
+
+
+
   DatabaseCleaner.clean
 end
